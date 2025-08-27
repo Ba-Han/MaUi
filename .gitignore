@@ -1,0 +1,46 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AllImagesFolder
+/Backend_Resources_Database
+/BeachFolder
+/BeautifulSoup
+/CRM API entity
+/CRM-App-Test
+/CRMAPIEFTEST
+/CRMDocumentation
+/CRM_API_DW10_Local
+/DataResource
+/documentfolder
+/DW
+/DW Interns
+/DW10Local
+/DW10Local-CRMAPI
+/DW10Local-CRMAPP
+/DW10LsConnector Databbase Backup
+/DW9
+/React/(01).React.js Essential Training
+/MauiToDoo/ToDooooooo
+/ExpenseTracker_Api
+/Get Phase 2 DEV branch API to deply DW10/Dynamicweb.CRM10.Integration
+/Honda
+/Jira Services
+/Portfolio
+/Python
+/Recipe Scrapers
+/Scrapy
+/SelfVideo
+/TAFCRM
+/TAFDEV-DB
+/TAFDW10-Database
+/Test-Recipe
+/Testing
+/Touch-Project
+/Translate
+/Appointment Letter & Staff Hand Book.zip
+/Honda.zip
+/Naming Convention.txt
+/recipe-scrapers-main.zip
+/Salary Adjustment - Your File.xlsx
+/SSL certificate.png
