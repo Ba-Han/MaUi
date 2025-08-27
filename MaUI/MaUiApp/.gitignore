@@ -1,47 +1,40 @@
-﻿# Build results
+# ===== .NET MAUI & Visual Studio =====
 bin/
 obj/
-
-# User-specific files
+.vs/
 *.user
-*.userosscache
+*.userprefs
 *.suo
 *.sln.docstates
-*.userprefs
 
-# Visual Studio
-.vs/
-
-# Mac build files
+# ===== OS & IDE Stuff =====
 *.DS_Store
+Thumbs.db
+ehthumbs.db
+*.swp
 
-# Logs
+# ===== Logs =====
 *.log
 
-# IDE metadata
-*.swp
-*.sln.iml
-
-# NuGet
+# ===== Packages =====
 *.nupkg
 *.snupkg
 packages/
 
-# OS files
-Thumbs.db
-ehthumbs.db
+# ===== MAUI Platform-Specific Build Outputs =====
+*.apk
+*.aab
+*.ipa
+*.app
+*.xcarchive
+*.dSYM
 
-# Maui-related cache
-*.db
-*.db-shm
-*.db-wal
-
-# Ignore your extra folders
+# ===== Your Large Data & Extra Folders =====
 All Scraping Data/
 AllImagesFolder/
-
-# Ignore large data files
 *.csv
 *.jpg
 *.jpeg
 *.png
+*.xlsx
+*.zip
