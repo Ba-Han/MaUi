@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MaUiApp_Learning.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MaUiApp_Learning"
+    xmlns:localv="clr-namespace:MaUiApp_Learning.Views"
+    Title="MaUiApp_Learning"
+    Shell.DisabledColor="Gray"
+    Shell.BackgroundColor="Purple"
+    Shell.NavBarHasShadow="False"
+    Shell.TitleColor="White"
+    Shell.ForegroundColor="Purple"
+    Shell.TabBarBackgroundColor="{StaticResource AppBaseThemColor}"
+    Shell.TabBarForegroundColor="{StaticResource Purple}">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent Route="ResetPasswordPage" ContentTemplate="{DataTemplate localv:ResetPasswordPage}"/>
+    <ShellContent Route="PrivacyNotice" ContentTemplate="{DataTemplate localv:PrivacyNotice}"/>
+    <ShellContent Route="HelpCenter" ContentTemplate="{DataTemplate localv:HelpCenter}"/>
+    <ShellContent Route="EmailUs" ContentTemplate="{DataTemplate localv:EmailUs}"/>
+    <ShellContent Route="FAQ" ContentTemplate="{DataTemplate localv:FAQ}"/>
+    <ShellContent Route="FAQDetailPage" ContentTemplate="{DataTemplate localv:FAQDetailPage}"/>
+
+</Shell>

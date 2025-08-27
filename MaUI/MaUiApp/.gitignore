@@ -1,0 +1,40 @@
+# ===== .NET MAUI & Visual Studio =====
+bin/
+obj/
+.vs/
+*.user
+*.userprefs
+*.suo
+*.sln.docstates
+
+# ===== OS & IDE Stuff =====
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+*.swp
+
+# ===== Logs =====
+*.log
+
+# ===== Packages =====
+*.nupkg
+*.snupkg
+packages/
+
+# ===== MAUI Platform-Specific Build Outputs =====
+*.apk
+*.aab
+*.ipa
+*.app
+*.xcarchive
+*.dSYM
+
+# ===== Your Large Data & Extra Folders =====
+All Scraping Data/
+AllImagesFolder/
+*.csv
+*.jpg
+*.jpeg
+*.png
+*.xlsx
+*.zip

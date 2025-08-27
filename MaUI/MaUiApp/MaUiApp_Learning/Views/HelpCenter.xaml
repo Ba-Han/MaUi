@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="MaUiApp_Learning.Views.HelpCenter"  
+             Title="Help Center"
+             Shell.NavBarIsVisible="True">  
+    <ScrollView>  
+        <VerticalStackLayout Padding="20" Spacing="20">  
+
+            <!-- Top Row: Back + Help Center -->  
+            <!--<Grid ColumnDefinitions="Auto,*">  
+                <ContentView Grid.Column="0">  
+                    <HorizontalStackLayout HorizontalOptions="Start">  
+                        <Image Source="back.png" HeightRequest="24" WidthRequest="24"/>  
+                    </HorizontalStackLayout>  
+
+                    <ContentView.GestureRecognizers>  
+                        <TapGestureRecognizer Tapped="OnBackClicked"/>  
+                    </ContentView.GestureRecognizers>  
+                </ContentView>  
+
+                <Label Text="Help Center"  
+               FontSize="18"  
+               HorizontalOptions="Start"  
+               VerticalOptions="Center"  
+               TextColor="DarkBlue"  
+               Margin="10,0,0,0"  
+               Grid.Column="1">  
+                </Label>  
+            </Grid>-->  
+
+            <!-- Address Card -->
+            <Border Padding="10" Stroke="#ddd" StrokeThickness="1" BackgroundColor="White">  
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Address &#10;" FontAttributes="Bold" FontSize="14" TextColor="Black"/>
+                    <Label Text="Malaysia: Lot 5043, Jalan Teratai, Meru, 41050 Klang, Selangor Darul Ehsan, Malaysia &#10;" FontSize="13"/>
+                    <Label Text="Indonesia: JL. Kapuk Kamal Raya No. 37 RT.02 / RW001 Kec. Penjaringan Kel. Kamal Muara, Jakarta Utara 14470 Indonesia" FontSize="13"/>  
+                </VerticalStackLayout>  
+            </Border>  
+
+            <!-- EmailUs Card -->
+            <Border Padding="10" Stroke="#ddd" StrokeThickness="1" BackgroundColor="White">
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnEmailUsTapped"/>
+                </Border.GestureRecognizers>
+
+                <Grid ColumnDefinitions="*,Auto">  
+                    <Label Text="EmailUs" FontSize="14" VerticalOptions="Center"/>  
+                    <Image Source="right_arrow.png" WidthRequest="16" HeightRequest="16" Grid.Column="1"/>  
+                </Grid>  
+            </Border>  
+
+            <!-- WhatsApp Card -->
+            <Border Padding="10" Stroke="#ddd" StrokeThickness="1" BackgroundColor="White">
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnWhatsAppTapped"/>
+                </Border.GestureRecognizers>
+
+                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto" VerticalOptions="Center">
+                    <Label Grid.Row="0" Grid.Column="0" Text="WhatsApp &#10;" FontAttributes="Bold" FontSize="14" TextColor="Black"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Malaysia: (+603) 3377 8288" FontSize="13"/>
+                    <Label Grid.Row="2" Grid.Column="0" Text="Indonesia: (+62) 851 6318 0261" FontSize="13"/>
+                    
+                    <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="1"
+                            Source="right_arrow.png"
+                            WidthRequest="16"
+                            HeightRequest="16"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End"/>    
+                </Grid>
+            </Border> 
+
+            <!-- Contact Us Card -->
+            <Border Padding="10" Stroke="#ddd" StrokeThickness="1" BackgroundColor="White">
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnContantUsTapped"/>
+                </Border.GestureRecognizers>
+
+                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto" VerticalOptions="Center">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Contact Us &#10;" FontAttributes="Bold" FontSize="14" TextColor="Black"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Malaysia: (+603) 3377 8288" FontSize="13"/>
+                    <Label Grid.Row="2" Grid.Column="0" Text="Indonesia: (+62-21) 29311475 &#10;" FontSize="13"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" Text="Malaysia: Mon – Fri : 09.00 AM - 06.00 PM" FontSize="13"/>
+                    <Label Grid.Row="4" Grid.Column="0" Text="Indonesia: Sen – Jum : 09.00 WIB - 17.00 WIB" FontSize="13"/>
+
+                    <Image Grid.Row="0" Grid.RowSpan="5" Grid.Column="1"
+                            Source="right_arrow.png"
+                            WidthRequest="16"
+                            HeightRequest="16"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End"/>
+                </Grid>
+            </Border>
+
+            <!-- FAQ Card -->
+            <Border Padding="10" Stroke="#ddd" StrokeThickness="1" BackgroundColor="White">
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFAQTapped"/>
+                </Border.GestureRecognizers>
+                
+                <Grid ColumnDefinitions="*,Auto">  
+                    <Label Text="FAQ" FontSize="14" VerticalOptions="Center"/>  
+                    <Image Source="right_arrow.png" WidthRequest="16" HeightRequest="16" Grid.Column="1"/>  
+                </Grid>  
+            </Border>  
+        </VerticalStackLayout>  
+    </ScrollView>  
+</ContentPage>

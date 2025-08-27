@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="MaUiApp_Learning.Views.EmailUs"  
+             Title="Email Us"
+             Shell.NavBarIsVisible="True">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Top Row: Back + Email Us -->
+            <!--<Grid ColumnDefinitions="Auto,*">
+                <ContentView Grid.Column="0">
+                    <HorizontalStackLayout HorizontalOptions="Start">
+                        <Image Source="back.png" HeightRequest="24" WidthRequest="24"/>
+                    </HorizontalStackLayout>
+
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnBackClicked"/>
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+
+                <Label Text="EmailUs"  
+                       FontSize="18"  
+                       HorizontalOptions="Start"  
+                       VerticalOptions="Center"  
+                       TextColor="DarkBlue"  
+                       Margin="10,0,0,0"  
+                       Grid.Column="1">
+                </Label>
+            </Grid>-->
+
+            <Label Text="We love to hear from you! Please use the form below to contact us."   
+               FontSize="Medium"   
+               FontAttributes="Bold"   
+               TextColor="DarkBlue" />
+
+            <!-- Name -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Name" />
+                        <Span Text="*" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry Placeholder="Enter Name" />
+
+            <!-- User ID -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="User ID" />
+                        <Span Text="*" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry Placeholder="Enter user id" />
+
+            <!-- Phone -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Phone - Mobile" />
+                        <Span Text="*" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry Placeholder="Enter number" Keyboard="Telephone" />
+
+            <!-- Email -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Email" />
+                        <Span Text="*" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry Placeholder="Enter Email" Keyboard="Email" />
+
+            <!-- Category -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Category" />
+                        <Span Text="*" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Picker Title="Select Category">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>ePlatform Account</x:String>
+                        <x:String>Product enquiry</x:String>
+                        <x:String>Price Inquiry</x:String>
+                        <x:String>Order Status</x:String>
+                        <x:String>Promotion</x:String>
+                        <x:String>Return &amp; Exchanges</x:String>
+                        <x:String>Customer Rewards</x:String>
+                        <x:String>Internet Payment Gateway</x:String>
+                        <x:String>Delivery Charges</x:String>
+                        <x:String>Terms of Use</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Subject -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Subject" />
+                        <Span Text="*" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry Placeholder="Enter subject" />
+
+            <!-- Message -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Message" />
+                        <Span Text="*" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Editor Placeholder="Type here" />
+
+            <!-- File Upload -->
+            <Label Text="File Upload (20MB Max)" />
+            <Grid>
+                <!-- The Entry that shows the file name -->
+                <Entry x:Name="fileNameEntry"
+                       Placeholder="No files chosen"
+                       IsReadOnly="True"
+                       BackgroundColor="White"
+                       TextColor="Black" />
+
+                <!-- The icon as a button -->
+                <ImageButton Source="paperclip.png"
+                            Clicked="OnPickFileClicked"
+                            BackgroundColor="Transparent"
+                            WidthRequest="5"
+                            HeightRequest="5"
+                            HorizontalOptions="End"
+                            Margin="0,0,10,10" />
+            </Grid>
+
+            <!-- Buttons -->
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                <Button Text="BACK" Clicked="OnBackClicked" BackgroundColor="DarkBlue" TextColor="White"/>
+                <Button Text="SEND" Clicked="OnSendClicked" BackgroundColor="DarkBlue" TextColor="White" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>  
+</ContentPage>

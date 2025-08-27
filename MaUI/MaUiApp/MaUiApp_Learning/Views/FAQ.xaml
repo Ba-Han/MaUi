@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaUiApp_Learning.Views.FAQ"
+             Title="FAQ"
+             Shell.NavBarIsVisible="True">
+    <ScrollView>
+
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Top Row: Back + FAQ -->
+            <!--<Grid ColumnDefinitions="Auto,*">
+                <ContentView Grid.Column="0">
+                    <HorizontalStackLayout HorizontalOptions="Start">
+                        <Image Source="back.png" HeightRequest="24" WidthRequest="24"/>
+                    </HorizontalStackLayout>
+
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnBackClicked"/>
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+
+                <Label Text="FAQ"  
+                   FontSize="18"  
+                   HorizontalOptions="Start"  
+                   VerticalOptions="Center"  
+                   TextColor="DarkBlue"  
+                   Margin="10,0,0,0"  
+                   Grid.Column="1">
+                </Label>
+            </Grid>-->
+
+            <!-- Search & Category -->
+            <Grid ColumnDefinitions="*, 2*"
+                  RowDefinitions="Auto"
+                  ColumnSpacing="10">
+
+                <!-- Picker with Down Arrow Icon in Column 0 -->
+                <Grid Grid.Column="0"
+                      HeightRequest="40"
+                      BackgroundColor="#f0f0f0"
+                      ColumnDefinitions="*,Auto"
+                      Padding="10,0"
+                      VerticalOptions="Center">
+
+                    <Picker x:Name="categoryPicker"
+                            Title="Category"
+                            ItemsSource="{Binding Categories}"
+                            SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Center"
+                            Grid.Column="0" />
+
+                    <Image Source="down-icon.png"
+                           WidthRequest="16"
+                           HeightRequest="16"
+                           VerticalOptions="Center"
+                           HorizontalOptions="End"
+                           Margin="5,0,5,0"
+                           Grid.Column="1" />
+                </Grid>
+
+                <!-- Search Bar with Icon in Column 1 -->
+                <Grid Grid.Column="1"
+                      HeightRequest="40"
+                      BackgroundColor="#f0f0f0"
+                      Padding="10,0"
+                      ColumnDefinitions="Auto,*"
+                      VerticalOptions="Center">
+
+                    <Image Source="search.png"
+                           WidthRequest="16"
+                           HeightRequest="16"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Margin="0,0,5,0" />
+
+                    <Entry x:Name="searchEntry"
+                           Placeholder="Search in list"
+                           ClearButtonVisibility="WhileEditing"
+                           BackgroundColor="Transparent"
+                           TextChanged="OnSearchTextChanged"
+                           Grid.Column="1"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </Grid>
+
+            <!-- FAQ Items -->
+            <CollectionView x:Name="faqCollectionView"
+                            SelectionMode="Single"
+                            ItemsSource="{Binding FaqItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="#ddd"
+                                StrokeThickness="1"
+                                Background="White"
+                                Margin="0,5"
+                                Padding="15">
+                            <Grid ColumnDefinitions="*, Auto">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference faqCollectionView}, Path=BindingContext.ItemTappedCommand}"
+                                  CommandParameter="{Binding .}" />
+                                </Grid.GestureRecognizers>
+                                
+                                <!-- Text Block -->
+                                <Label Text="{Binding Question}"
+                                       FontSize="14"
+                                       TextColor="Black"
+                                       LineBreakMode="WordWrap"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       Grid.Column="0" />
+
+                                <!-- Right Arrow Icon -->
+                                <Image Source="right_arrow.png"
+                                       WidthRequest="16"
+                                       HeightRequest="16"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       Grid.Column="1" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
