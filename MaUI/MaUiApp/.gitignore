@@ -30,8 +30,8 @@ packages/
 *.dSYM
 
 # ===== Your Large Data & Extra Folders =====
-All Scraping Data/
-AllImagesFolder/
+../../All Scraping Data/
+../../AllImagesFolder/
 *.csv
 *.jpg
 *.jpeg
