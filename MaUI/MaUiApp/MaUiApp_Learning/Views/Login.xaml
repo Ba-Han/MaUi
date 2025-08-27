@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaUiApp_Learning.Views.Login"
+             BackgroundColor="White"
+             Title="Login">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <!-- Language -->
+        <Label Text="Choose Language ▼"
+           FontSize="14"
+           HorizontalOptions="End"
+           TextColor="DarkBlue"
+           Margin="0,10,0,0">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnLanguageTapped"/>
+            </Label.GestureRecognizers>
+        </Label>
+
+
+        <!-- Logo -->
+        <Image Source="logo_on_login.png"
+           HeightRequest="100"
+           WidthRequest="100"
+           HorizontalOptions="Center" 
+           Margin="0,20"/>
+
+        <!-- Sign In -->
+        <Label Text="Sign in"
+           FontAttributes="Bold"
+           FontSize="22"
+           HorizontalOptions="Start"
+           TextColor="Gray"
+           Margin="0,10" />
+
+        <!-- Email -->
+        <Entry Placeholder="Email"
+           Text="{Binding Email}"
+           Keyboard="Email"
+           Margin="0,5" />
+
+        <!-- Password -->
+        <Entry Placeholder="Password"
+           Text="{Binding Password}"
+           IsPassword="True"
+           Margin="0,5" />
+
+        <!-- Remember me / Forgot -->
+        <Grid ColumnDefinitions="*,Auto" Padding="0,5">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <CheckBox/>
+                <Label Text="Remember me" VerticalOptions="Center" FontSize="14" Margin="5,0,0,0"/>
+            </StackLayout>
+            <Label Text="Forgot your password?"
+               TextColor="DarkBlue"
+               FontSize="14"
+               VerticalOptions="Center"
+               HorizontalOptions="End"
+               Grid.Column="1">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+
+        <!-- Sign In Button -->
+        <Button Text="SIGN IN"
+            BackgroundColor="DarkBlue"
+            TextColor="White"
+            CornerRadius="5"
+            FontAttributes="Bold"
+            Margin="0,10"
+            HeightRequest="45"/>
+
+        <!-- Help & Privacy -->
+        <Grid ColumnDefinitions="*,Auto" Padding="0,5">
+            <Label Text="Help Center"
+               HorizontalOptions="Start"
+               FontSize="14"
+               TextColor="DarkBlue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnHelpCenterTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Privacy Notice"
+               HorizontalOptions="End"
+               FontSize="14"
+               TextColor="DarkBlue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnPrivacyTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+
+        <!-- Copyright -->
+        <Label Text="COPYRIGHT © AG ADVANCED TECH SDN. BHD. 201801025464 (1287485-W).\nAll rights reserved."
+           FontSize="11"
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Center"
+           TextColor="Gray"
+           Margin="0,10"/>
+
+        <!-- Social Icons -->
+        <StackLayout Orientation="Horizontal"
+                 HorizontalOptions="Center"
+                 Spacing="15"
+                 Margin="0,10">
+
+            <!-- Facebook -->
+            <Image Source="facebook.png" WidthRequest="40" HeightRequest="40">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenFacebookCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <!-- Twitter -->
+            <Image Source="twitter.png" WidthRequest="40" HeightRequest="40">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenTwitterCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <!-- LinkedIn -->
+            <Image Source="linkedin.png" WidthRequest="40" HeightRequest="40">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenLinkedInCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <!-- Instagram -->
+            <Image Source="ig.png" WidthRequest="40" HeightRequest="40">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenInstagramCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <!-- Website -->
+            <Image Source="globle.png" WidthRequest="40" HeightRequest="40">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenWebsiteCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+
+        </StackLayout>
+
+        <!-- Version -->
+        <Label Text="v1.5.2"
+           FontSize="10"
+           HorizontalOptions="End"
+           TextColor="Gray"
+           Margin="0,5"/>
+    </VerticalStackLayout>
+</ContentPage>

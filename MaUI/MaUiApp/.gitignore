@@ -1,0 +1,47 @@
+﻿# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.userprefs
+
+# Visual Studio
+.vs/
+
+# Mac build files
+*.DS_Store
+
+# Logs
+*.log
+
+# IDE metadata
+*.swp
+*.sln.iml
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+
+# Maui-related cache
+*.db
+*.db-shm
+*.db-wal
+
+# Ignore your extra folders
+All Scraping Data/
+AllImagesFolder/
+
+# Ignore large data files
+*.csv
+*.jpg
+*.jpeg
+*.png

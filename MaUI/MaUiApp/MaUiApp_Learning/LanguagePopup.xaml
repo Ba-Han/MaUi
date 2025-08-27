@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<toolkit:Popup  
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"  
+    x:Class="MaUiApp_Learning.LanguagePopup"  
+    Color="White"  
+    Size="300,300">  
+
+    <VerticalStackLayout Padding="20">
+        <Entry Text="Choose Language" TextColor="DarkBlue" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+        <VerticalStackLayout Spacing="20" Margin="0,10,0,0">
+            <Label Text="English - Malaysia" />
+            <Label Text="Bahasa - Malaysia" />
+            <Label Text="中文 - Malaysia" />
+            <Label Text="English - Indonesia" />
+            <Label Text="Bahasa - Indonesia" />
+        </VerticalStackLayout>
+
+        <Button Text="Close"
+                BackgroundColor="DarkBlue"
+                TextColor="White"
+                HorizontalOptions="End"
+                WidthRequest="100"
+                Clicked="OnCloseButtonClicked"/>
+    </VerticalStackLayout>  
+</toolkit:Popup>
+
+    
+    

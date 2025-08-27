@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaUiApp_Learning.Views.FAQDetailPage"
+             Title="FAQ"
+             Shell.NavBarIsVisible="True">
+    
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <!-- Top Row: Back + FAQ -->
+        <!--<Grid ColumnDefinitions="Auto,*">
+            <ContentView Grid.Column="0">
+                <HorizontalStackLayout HorizontalOptions="Start">
+                    <Image Source="back.png" HeightRequest="24" WidthRequest="24"/>
+                </HorizontalStackLayout>
+
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBackClicked"/>
+                </ContentView.GestureRecognizers>
+            </ContentView>
+
+            <Label Text="FAQ"  
+                   FontSize="18"  
+                   HorizontalOptions="Start"  
+                   VerticalOptions="Center"  
+                   TextColor="DarkBlue"  
+                   Margin="10,0,0,0"  
+                   Grid.Column="1">
+            </Label>
+        </Grid>-->
+        
+        <StackLayout>
+            <Label Text="{Binding SelectedFAQ.Question}"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="Black" />
+
+            <Label FontSize="12"
+                   TextColor="Gray">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding SelectedFAQ.Date, StringFormat='Date: {0:MM/dd/yyyy h:mm tt}'}" />
+                        <Span Text="&#10;" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text="{Binding SelectedFAQ.Answer}"
+                   FontSize="14"
+                   TextColor="Black"
+                   LineBreakMode="WordWrap" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

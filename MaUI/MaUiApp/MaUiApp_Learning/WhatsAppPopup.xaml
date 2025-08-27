@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>    
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               x:Class="MaUiApp_Learning.WhatsAppPopup"
+               Size="300,300"
+               Color="White">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Contact Us via WhatsApp"
+               FontAttributes="Bold"
+               FontSize="16"
+               TextColor="DarkBlue"
+               HorizontalOptions="Center"/>
+
+        <Label Text="Select Contact Number"
+               FontSize="14"
+               HorizontalOptions="Center"/>
+
+        <Button Text="(+603) 3377 8288"
+                BackgroundColor="DarkBlue"
+                TextColor="White"
+                Clicked="OnMalaysiaClicked"/>
+
+        <Button Text="(+62) 851 6318 0261"
+                BackgroundColor="DarkBlue"
+                TextColor="White"
+                Clicked="OnIndonesiaClicked"/>
+
+        <Button Text="CANCEL"
+                BackgroundColor="DarkBlue"
+                TextColor="White"
+                Clicked="OnCancelClicked"/>
+    </VerticalStackLayout>
+</toolkit:Popup>

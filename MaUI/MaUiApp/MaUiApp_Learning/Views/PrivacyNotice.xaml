@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MaUiApp_Learning.Views.PrivacyNotice"
+             Title="Privacy Notice"
+             Shell.NavBarIsVisible="True">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Top Row: Back + Privacy Notice -->
+            <!--<Grid ColumnDefinitions="Auto,*">
+                <ContentView Grid.Column="0">
+                    <HorizontalStackLayout HorizontalOptions="Start">
+                        <Image Source="back.png" HeightRequest="24" WidthRequest="24"/>
+                    </HorizontalStackLayout>
+
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnBackClicked"/>
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+
+                <Label Text="Privacy Notice"
+                   FontSize="18"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   TextColor="DarkBlue"
+                   Margin="10,0,0,0"
+                   Grid.Column="1">
+                </Label>
+            </Grid>-->
+
+            <!-- Logo -->
+            <Image Source="logo_on_login.png"
+               HeightRequest="100"
+               WidthRequest="100"
+               HorizontalOptions="Center" 
+               Margin="0,10"/>
+
+            <!-- Privacy Policy Text-->
+            <Label Text="Privacy Policy"
+               FontSize="14"
+               FontAttributes="Bold"
+               HorizontalOptions="Start"
+               TextColor="Black"/>
+
+            <Label Text="Personal Information - Notice and Consent"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"
+                   TextColor="Black"/>
+
+            <Entry Margin="0,1,0,0" />
+
+            <!-- Body Intro -->
+            <Label FontSize="13" TextColor="Black">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Dear Valued Customer / Supplier / Stakeholder,&#10;&#10;" FontAttributes="Bold"/>
+
+                        <Span Text="The New Hoong Fatt Group, which includes the holding company, subsidiaries (including AG Advanced Tech Sdn. Bhd) and any associated company, are committed to ensuring that your personal data is protected. We respect your privacy and we assure you that your personal data will be kept securely according to the Personal Data Protection Act 2022.&#10;&#10;" />
+
+                        <Span Text="As our valued customer/supplier/stakeholder, we would like to continue sending you information from time to time by telephone, call, fax, post and e-mail regarding our latest promotions, events and happenings.&#10;&#10;" />
+
+                        <Span Text="In order to do so, New Hoong Fatt Group processes your personal information, such as your contact details, background information, personal/financial information such as EA forms, religion, date of birth, age, bank account details and other information relevant to your account with us, which you have previously provided through contact with us. If you are a corporate entity, this information will include those personal information of your directors, shareholders and/or company secretary. New Hoong Fatt Group may also have obtained your personal information from third parties such as your employers, guarantors, industry related associations, credit bureaus or credit reference agencies, retailers, social networks or other organisations.&#10;&#10;" />
+
+                        <Span Text="Please be informed that your personal information is being processed by New Hoong Fatt Group for the following purposes (“Purpose”):" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <!-- Bullet List -->
+            <Label Text="• Providing you with our products and services which you have subscribed for and notifying you about important changes or developments to the features." FontSize="13" TextColor="Black"/>
+            <Label Text="• Disclosure of your information to service providers, agents and/or contractors..." FontSize="13" TextColor="Black"/>
+            <Label Text="• Prevention, detection or prosecution of crime..." FontSize="13" TextColor="Black"/>
+            <Label Text="• Communications and ensuring customer satisfaction..." FontSize="13" TextColor="Black"/>
+            <Label Text="• Credit assessments and other background checks..." FontSize="13" TextColor="Black"/>
+            <Label Text="• Our internal record keeping." FontSize="13" TextColor="Black"/>
+            <Label Text="• Protecting New Hoong Fatt Group’s interests and other ancillary or related purposes." FontSize="13" TextColor="Black"/>
+
+            <!-- Conclusion -->
+            <Label FontSize="13" TextColor="Black">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Your personal information may be disclosed to other companies within New Hoong Fatt Group, service providers, strategic partners, vendors including professional advisers, debt collection agencies, industry related associations, credit bureaus or credit reference agencies, governmental agencies, whether located within or outside Malaysia for the Purpose. Please note that it is necessary for New Hoong Fatt Group to process your personal information for the Purpose, without which New Hoong Fatt Group will not be able to provide our product and services that you have requested from us.&#10;&#10;" />
+
+                        <Span Text="You may request for access to, correction, or deletion of your personal information or limit the processing thereof at any time hereafter. Any inquiries or complaints with respect to your personal information may be submitted in writing to the following address:&#10;&#10;" />
+
+                        <Span Text="New Hoong Fatt Holdings Berhad" FontAttributes="Bold" />
+                        <Span Text="&#10;&#10;Lot 5043, Jalan Teratai, Meru&#10;&#10;41050 Klang, Selangor&#10;&#10;Telephone number: +603-3392 6818&#10;&#10;Facsimile number: +603-3392 6808&#10;&#10;Email: enquiries@newhoongfatt.com.my&#10;&#10;" />
+
+                        <Span Text="New Hoong Fatt Group may modify or update this privacy notice at any time. In any case, an updated version of this notice is available on " />
+                        <Span Text="www.newhoongfatt.com.my" TextColor="Blue" />
+                        <Span Text=" and you may periodically review this website to obtain the latest information on New Hoong Fatt Group’s privacy practices.&#10;&#10;" />
+
+                        <Span Text="We trust that you consent and agree to the terms above with respect our processing of your personal information. If you do not consent, kindly contact us at the abovementioned contact details. We thank you for your continued support.&#10;&#10;" />
+
+                        <Span Text="Yours faithfully,&#10;&#10;" />
+                        <Span Text="New Hoong Fatt Holdings Berhad" FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
